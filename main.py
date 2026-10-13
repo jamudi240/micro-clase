@@ -41,6 +41,21 @@ def visualizar_repuestos(inventario):
     for item in inventario:
         print(f"{item['codigo']:<15} | {item['nombre']:<25} | {item['cantidad']:<10}")
 
+def eliminar_repuesto(inventario):
+    print("\n--- ELIMINAR REPUESTO ---")
+    if not inventario:
+        print("⚠️ El inventario está vacío. No hay elementos para eliminar.")
+        return
+
+    codigo = input("Ingrese el código del repuesto a eliminar: ").strip()
+    for item in inventario:
+        if item["codigo"] == codigo:
+            inventario.remove(item)
+            print(f"✅ Éxito: Repuesto con código '{codigo}' eliminado correctamente.")
+            return
+
+    print(f"❌ Error: No se encontró ningún repuesto con el código '{codigo}'.")
+
 def main():
     inventario = []
     while True:
@@ -52,7 +67,7 @@ def main():
         elif opcion == "2":
             visualizar_repuestos(inventario)
         elif opcion == "3":
-            print("\n⏳ Función de eliminación asignada al Code Reviewer/Dev 3.")
+            eliminar_repuesto(inventario)
         elif opcion == "4":
             print("\n👋 Saliendo del sistema... ¡Hasta luego!")
             break
