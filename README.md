@@ -11,5 +11,5 @@ Proyecto desarrollado en Python aplicando la metodología ágil Extreme Programm
 
 
 1. Clonar el repositorio:
-   ```bash
-   git clone [https://github.com/jamudi240/micro-clase.git](https://github.com/jamudi240/micro-clase.git)
+```bash
+git clone [https://github.com/jamudi240/micro-clase.git](https://github.com/jamudi240/micro-clase.git)
